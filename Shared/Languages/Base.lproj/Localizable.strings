@@ -1,0 +1,29 @@
+/* 
+  Localizable.strings
+  CW
+
+  Created by Kirill Botalov on 31.08.17.
+
+*/
+
+"Record" = "Record moves: ";
+"NewRecord" = "New record of moves: ";
+
+/* Обучение */
+"S1" = "Welcome to Color Wars!";
+"S2" = "In this game, your goal is to capture more cells than your opponent,";
+"S3" = "Сhanging your color, you capture adjacent cells of this color";
+"S4" = "You start the game in a place marked with a light chip";
+"S5" = "The enemy begins in a place marked by a dark chip";
+"S6" = "The choice of colors occurs on the right side of the screen";
+"S7" = "You can not select a color that is occupied by another player";
+"S8" = "The progress of the game is displayed at the top of the screen";
+"S9" = "Let's start the game!";
+"S10" = "Selecting the yellow color, you will greatly advance";
+"S11" = "Choose yellow color...";
+"S12" = "If you choose red, then block the advance of the opponent for one turn";
+"S13" = "Choose red color...";
+"S14" = "Selecting the blue color, you surround the cell area and attach them";
+"S15" = "Choose blue color...";
+"S16" = "When you capture more than half of the cells, you will win.";
+"S17" = "Good luck!";
