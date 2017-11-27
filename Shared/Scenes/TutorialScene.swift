@@ -33,6 +33,9 @@ class TutorialScene: BaseScene {
     var animationCell = false
     
     var curentStep = -1
+    
+    // направление стрелочки
+    var buttonArrowRotation: CGFloat = 0
 
     enum arrowPosition {
         
@@ -149,6 +152,15 @@ class TutorialScene: BaseScene {
             star.zPosition = cellNodes[0].zPosition + 0.1
             self.gamePoleSprite.addChild(star)
             startStar.append(star)
+        }
+        
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone:
+            buttonArrowRotation = 1
+        case .pad:
+            buttonArrowRotation = -1
+        default:
+            buttonArrowRotation = -1
         }
 
         startTutorial()
@@ -268,8 +280,8 @@ class TutorialScene: BaseScene {
                 arrowSprite.zRotation = 2
             case .button:
                 buttonsNode.addChild(arrowSprite)
-                arrowSprite.position = CGPoint(x: -(buttonsNode.size.width / 2) - 2 , y: 0)
-                arrowSprite.zRotation = -2
+                arrowSprite.position = CGPoint(x: (buttonsNode.size.width / 2) * buttonArrowRotation - 2 , y: 0)
+                arrowSprite.zRotation = 2 * buttonArrowRotation
                 buttonsNode.isHidden = false
             case .scoreBar:
                 scoreBarNode.scoreBarNode.addChild(arrowSprite)
@@ -282,7 +294,7 @@ class TutorialScene: BaseScene {
                     }
                 }
                 arrowSprite.position = CGPoint(x: 0, y: 0)
-                arrowSprite.zRotation = -2
+                arrowSprite.zRotation = 2 * buttonArrowRotation
             }
         }
     }
